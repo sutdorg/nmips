@@ -5,12 +5,13 @@ rm -rf $BUILD_DIR || echo "No existing build dir, sadge"
 mkdir $BUILD_DIR
 
 # SDK_DOWNLOAD="https://hex-rays.com/products/ida/support/ida/idasdk76.zip"
-SDK_DOWNLOAD="https://cdn.vis.ethz.ch/ctf/idasdk.zip"
+# SDK_DOWNLOAD="https://cdn.vis.ethz.ch/ctf/idasdk.zip"
+SDK_DOWNLOAD = "https://github.com/luodaoyi/IDAStringFindNet/raw/master/idasdk76.zip"
 echo "[*] Downloading idasdk..."
 # wget --http-user=$IDA_USER --http-password=$IDA_PASS $SDK_DOWNLOAD -O $BUILD_DIR/idasdk.zip
-wget $SDK_DOWNLOAD -O $BUILD_DIR/idasdk.enc.zip
+wget $SDK_DOWNLOAD -O $BUILD_DIR/idasdk.zip
 echo "[*] Decrypting idasdk..."
-openssl aes-256-cbc -d -md sha256 -in $BUILD_DIR/idasdk.enc.zip -out $BUILD_DIR/idasdk.zip -pass env:IDA_PASS
+# openssl aes-256-cbc -d -md sha256 -in $BUILD_DIR/idasdk.enc.zip -out $BUILD_DIR/idasdk.zip -pass env:IDA_PASS
 echo "[*] Setting up idasdk..."
 cd $BUILD_DIR
 unzip idasdk
