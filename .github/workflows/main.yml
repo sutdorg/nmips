@@ -28,14 +28,14 @@ jobs:
             pkg: choco install openssl wget
             artifact: '*nmips.dll'
             name: windows
-          - os: ubuntu-latest
-            pkg: sudo apt-get install -y openssl wget
-            artifact: libnmips.so
-            name: linux
-          - os: macos-11
-            pkg: brew install openssl wget
-            artifact: lib*nmips.dylib
-            name: macos
+          # - os: ubuntu-latest
+          #   pkg: sudo apt-get install -y openssl wget
+          #   artifact: libnmips.so
+          #   name: linux
+          # - os: macos-11
+          #   pkg: brew install openssl wget
+          #   artifact: lib*nmips.dylib
+          #   name: macos
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
