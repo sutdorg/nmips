@@ -6,7 +6,7 @@ mkdir $BUILD_DIR
 
 # SDK_DOWNLOAD="https://hex-rays.com/products/ida/support/ida/idasdk76.zip"
 # SDK_DOWNLOAD="https://cdn.vis.ethz.ch/ctf/idasdk.zip"
-SDK_DOWNLOAD = "https://github.com/luodaoyi/IDAStringFindNet/raw/master/idasdk76.zip"
+SDK_DOWNLOAD="https://github.com/luodaoyi/IDAStringFindNet/raw/master/idasdk76.zip"
 echo "[*] Downloading idasdk..."
 # wget --http-user=$IDA_USER --http-password=$IDA_PASS $SDK_DOWNLOAD -O $BUILD_DIR/idasdk.zip
 wget $SDK_DOWNLOAD -O $BUILD_DIR/idasdk.zip
